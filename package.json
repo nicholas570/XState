@@ -17,10 +17,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .ts --ext .tsx --fix",
-    "precommit": "lint-staged && yarn test"
+    "precommit": "lint-staged"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,12 +52,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run precommit"
+      "pre-commit": "npm run precommit"
     }
   },
   "lint-staged": {
     "src/**/*.ts*": [
-      "yarn lint",
+      "npm run lint",
       "prettier --write"
     ]
   }
